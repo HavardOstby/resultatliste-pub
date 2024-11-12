@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultatliste</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .tab-header {
+            cursor: pointer;
+            background-color: #ccc;
+            padding: 10px;
+            border: 1px solid #aaa;
+            margin-right: 5px;
+            display: inline-block;
+        }
+        .tab-header.active {
+            background-color: #002147;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .resultatliste-container {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            background-color: #002147;
+            color: white;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .button-container {
+            margin-bottom: 10px;
+        }
+        .input-container {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>Resultatliste</center></h1>
+    <center>
+        <button onclick="nyResultatliste('desc', 'sum')">Ny resultatliste Høyt > Lavt (Sum)</button>
+        <button onclick="nyResultatliste('asc', 'sum')">Ny resultatliste Lavt < Høyt (Sum)</button>
+        <button onclick="nyResultatliste('desc', 'tid')">Ny resultatliste Høyt > Lavt (Tid)</button>
+        <button onclick="nyResultatliste('asc', 'tid')">Ny resultatliste Lavt < Høyt (Tid)</button>
+    </center>
+    <div id="tabContainer" style="text-align: center; margin-top: 20px;"></div>
+    <div id="resultatlisteContainer"></div>
+    <script src="script.js"></script>
+</body>
+</html>
